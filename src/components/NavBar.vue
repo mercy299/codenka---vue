@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="navbar-container">
         <nav :class="{ 'is-dark': dark }">
             <img src="@/assets/img/logo/logo.svg" alt="logo" />
             <ul>
@@ -98,5 +98,10 @@ nav ul a:hover {
 
 nav img {
     width: 140px;
+}
+@media screen and (max-width: 850px) {
+  .navbar-container {
+    display: none;
+  }
 }
 </style>

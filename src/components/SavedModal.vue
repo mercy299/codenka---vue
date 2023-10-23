@@ -1,7 +1,7 @@
 <template>
-    <div class="modal" id="checkout-modal">
+    <div class="modal" id="checkout-modal" v-if="showModal">
         <div class="card" id="card">
-            <span class="close" id="close-btn">&times;</span>
+            <span class="close" id="close-btn" @click="closeModal">&times;</span>
             <h3>CHECKOUT</h3>
             <p>You are about to purchase</p>
             <div class="card-product-summary-head-text">
@@ -19,7 +19,7 @@
             </p>
             <button>Proceed</button>
         </div>
-    <div class="close" @click="$emit('close-modal')">
+    <div class="close" @click="closeModal">
         x 
     </div>
     </div>
@@ -27,7 +27,16 @@
 
 <script>
 export default {
-
+    data() {
+    return {
+      showModal: true,
+    };
+    },
+    methods: {
+    closeModal() {
+      this.showModal = false;
+    },
+  },
 }
 </script>
 
@@ -37,10 +46,10 @@ export default {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -72,9 +81,11 @@ export default {
 
 .modal .close {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    right: 10px; /* Adjust the position as needed */
+    top: 10px; /* Adjust the position as needed */
 }
 
 .modal .close:hover,

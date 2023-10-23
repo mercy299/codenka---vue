@@ -33,7 +33,7 @@
             <p>Figma</p>
             <p>$37</p>
           </div>
-          <a class="button" id="checkout" @click="showModal = true">Buy Now</a>
+          <a class="button" id="checkout" @click="openModal">Buy Now</a>
           <hr width="380" />
           <div class="tag">
             <img src="@/assets/img/tag.svg" />
@@ -57,8 +57,13 @@ export default {
     },
     data () {
         return {
-            showModal: true,
+            showModal: false,
         }
+    },
+    methods: {
+      openModal() {
+        this.showModal = true;
+      }
     }
 }
 </script>

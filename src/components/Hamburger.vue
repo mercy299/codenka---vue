@@ -1,93 +1,70 @@
 <template>
-    <div :class="['hamburger-container', { opened: navMenu === 'block' }]">
-        <div class="hamburger" @click="toggleDiv">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <div class="nav-menu" :style="{ display: navMenu }">
-            <a href="Blog.html" class="nav-link">Hom</a>
-            <a href="work.html" class="nav-link">About</a>
-            <a href="contact.html" class="nav-link">Browse</a>
-            <a href="contact.html" class="nav-link">Become an Author</a>
-            <a href="contact.html" class="nav-link">Blog</a>
-            <a href="contact.html" class="nav-link">Sign up</a>
-            <a href="contact.html" class="nav-link">Login</a>
-        </div>
+    <div>
+      <button @click="toggleMenu">☰</button>
+      <div v-if="showMenu" class="menu">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/browse">Browse</router-link>
+        <router-link to="/author">Become an Author</router-link>
+        <!-- Add more menu items as needed -->
+      </div>
     </div>
-</template>
-
+  </template>
+  
 <script>
-export default {
+
+  
+  export default {
     data() {
-        return {
-            navMenu: 'none',
-        };
+      return {
+        showMenu: false,
+      };
     },
     methods: {
-        toggleDiv() {
-            this.navMenu = this.navMenu === 'block' ? 'none' : 'block';
-        },
+      toggleMenu() {
+        this.showMenu = !this.showMenu;
+      },
     },
-}
+  };
 </script>
 
-<style>
-.hamburger-container.opened {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background: brown;
-    z-index: 999;
+<style scoped>
+/* BurgerMenu.vue */
+button {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    z-index: 2; /* Set a higher z-index to appear on top */
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
 }
 
-.bar {
-    display: block;
-    width: 3em;
-    height: 0.5em;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background-color: #131344;
-    position: relative;
-    top: 10;
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #023059;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 830px;
+  padding: 60px;
+  border-radius: 5px;
+  height: 100vh;
 }
 
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+/* MenuItem.vue */
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 58px;
 }
 
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+a:hover {
+  text-decoration: underline;
 }
 
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-.nav-menu {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    /* height: 100%; */
-    padding: 4.75rem 1rem;
-    width: 100%;
-    z-index: -1;
-    gap: 2rem;
-    transition: all .3s ease-in-out;
-}
-
-.nav-menu a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-size: 4em;
-    font-weight: 400;
-}
-
-.nav-menu.active {
-    right: 0;
-}
 </style>

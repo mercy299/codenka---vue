@@ -95,86 +95,21 @@ input{
     font-size: 14px;
     color: rgba(141, 144, 145, 1);
 }
-@media  screen and (max-width: 10px) {
-    body{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        font-family: 'DM Sans';
-    }
+@media screen and (max-width: 1390px) {
     .hero-section{
     display: flex;
+    flex-direction:column-reverse;
     padding: 3em 5em;
     gap: 1em;
-    /* padding-bottom: 11em; */
-    /* background-color: rgb(247, 249, 255); */
-    }
-    .hero-section-img img{
-        width: 234px;
+    padding-bottom: 11em;
+    background-color: rgb(247, 249, 255);
     }
     .hero-section-text{
-        width: 261px;
+    flex: 25%;
+    text-align: center;
     }
-    .hero-section-text h1{
-        font-size: 24px;
-    }
-    .hero-section-text p{
-        font-size: 14px;
-    }
-    .btn{
-        width: 120px;
-    }
-    .search{
-        width: 352px;
-    }
-    .input-search{
-        width: 104px;
-        padding: 1.5em 2em;
-    }
-    .section2-img{
-        display: none;
-    }
-    .section2-text h1{
-        font-size: 24px;
-    }
-    .section2-mobile-view-img{
-        display: flex;
-    }
-    .section3-btns{
-        display: none;
-        /* flex-wrap: wrap; */
-    }
-    .section3{
-        background-color: rgb(228, 233, 254);
-    }
-    .section3-cards{
-        display: block;
-    }
-    .section3-card-item{
-        width: 357px;
-        margin: 0% 0 0 0;
-        padding: 0%;
-    }
-    .section4{
-        background-color: rgb(216, 226, 254);
-        background-image: none;
-        /* background-size: 10%; */
-    }
-    .section4-img{
-        display: none;
-    }
-    .section4-mid-text{
-        display: flex;
-        width: fit-content;
-        border: 1px solid red;
-        margin: 0;
-    }
-    .section4-mid-text p{
-        font-size: 38px;
-    }
-    .section4-flex-text{
-        display: flex;
-        flex-direction: column;
+    form{
+        justify-content: center;
     }
 }
 @media  screen and (max-width: 500px) {

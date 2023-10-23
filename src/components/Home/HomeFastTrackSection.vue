@@ -7,7 +7,7 @@
         <p>
           Fast-track your website or app creation <br />process with Codenka
         </p>
-        <button>Get Started</button>
+        <button class="">Get Started</button>
       </div>
       <div class="section4-flex-text">
         <div class="section4-flex-text-img">
@@ -34,6 +34,7 @@
           />
           <p>Clean, Minimal & Modern Design</p>
         </div>
+        <button class="bigscreen-hidden">Get Started</button>
       </div>
     </section>
 </template>
@@ -44,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section4{
     /* display: flex; */
     flex-direction: column;
@@ -90,5 +91,21 @@ export default {
     gap: 20px;
     justify-content: space-around;
     margin-top: 2em ;
+}
+.bigscreen-hidden{
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .section4-img {
+    display: none;
+  }
+  .section4-flex-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bigscreen-hidden{
+  display: block;
+}
 }
 </style>

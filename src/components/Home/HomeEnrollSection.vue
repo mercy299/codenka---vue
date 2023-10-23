@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section2{
     background-color:rgb(251, 252, 255);
     display: flex;
@@ -65,5 +65,14 @@ export default {
 .section2-text h1{
     font-size: 56px;
     color: rgba(2, 48, 89, 1);
+}
+@media screen and (max-width: 1200px) {
+  .section2{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section2-img{
+    text-align: center;
+  }
 }
 </style>
