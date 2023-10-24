@@ -275,4 +275,16 @@ export default {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width: 850px) {
+  .section3{
+    background-color: #d9e2ff;
+  }
+  .section3-btns button:nth-child(n + 7){
+    display: none;
+  }
+  .section3-cards{
+    margin-top: 1em;
+  }
+
+}
 </style>

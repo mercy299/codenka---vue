@@ -7,7 +7,7 @@
         <p>
           Fast-track your website or app creation <br />process with Codenka
         </p>
-        <button class="">Get Started</button>
+        <button class="smallscreen-hidden">Get Started</button>
       </div>
       <div class="section4-flex-text">
         <div class="section4-flex-text-img">
@@ -96,6 +96,9 @@ export default {
   display: none;
 }
 @media screen and (max-width: 850px) {
+  .section4{
+    background-color: #d9e2ff;
+  }
   .section4-img {
     display: none;
   }
@@ -106,6 +109,9 @@ export default {
   }
   .bigscreen-hidden{
   display: block;
-}
+  }
+  .smallscreen-hidden{
+    display: none;
+  }
 }
 </style>

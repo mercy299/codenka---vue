@@ -28,6 +28,7 @@
             <li>Partners</li>
           </ul>
         </div>
+        
         <div class="footer-support">
           <ul>
             <li>Support</li>
@@ -95,6 +96,19 @@ footer{
 .footer-ul ul{
     list-style-type: none;
     line-height: 230%;
+}
+@media screen and (max-width: 850px) {
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  /* .footer-ul:nth-child(n + 2){
+    display: inline;
+  } */
+
+
+/* Add any other styles you need for the list items and links */
+
 }
 
 </style>
