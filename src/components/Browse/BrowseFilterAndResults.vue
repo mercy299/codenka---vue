@@ -725,4 +725,18 @@ input{
     height: 100px;
     margin-top: 5%;
 }
+@media screen and (max-width: 850px) {
+  .filter{
+    display: none;
+  }
+  .filter-and-result-cards{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .filter-and-result-cards .filter-and-result-card-item:nth-child(n +7){
+    display: none;
+  }
+}
 </style>

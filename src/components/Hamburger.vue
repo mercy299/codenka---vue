@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="hamburger">
       <button @click="toggleMenu">☰</button>
       <div v-if="showMenu" class="menu">
         <router-link to="/">Home</router-link>
@@ -9,7 +9,7 @@
         <!-- Add more menu items as needed -->
       </div>
     </div>
-  </template>
+  </template> 
   
 <script>
 
@@ -53,6 +53,7 @@ button {
   padding: 60px;
   border-radius: 5px;
   height: 100vh;
+  /* z-index: 99; */
 }
 
 /* MenuItem.vue */

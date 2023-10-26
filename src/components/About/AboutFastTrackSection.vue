@@ -55,4 +55,12 @@ export default {
   /* margin: 2em 0; */
   /* text-align: center; */
 }
+@media screen and (max-width: 850px) {
+  .section4{
+    background-color: #d9e2ff;
+  }
+  .section4-img {
+    display: none;
+  }
+}
 </style>

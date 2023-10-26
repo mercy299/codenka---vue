@@ -1,5 +1,8 @@
 <template>
     <section class="section2">
+      <div class="bigscreen-hidden">
+        <p>Enroll as a Codenka Designer</p> 
+      </div>
       <div class="section2-img">
         <img src="@/assets/img/section2-img.svg" width="577px" />
       </div>
@@ -41,6 +44,9 @@ export default {
 </script>
 
 <style scoped>
+.bigscreen-hidden{
+  display: none;
+}
 .section2{
     background-color:rgb(251, 252, 255);
     display: flex;
@@ -67,12 +73,28 @@ export default {
     color: rgba(2, 48, 89, 1);
 }
 @media screen and (max-width: 1200px) {
+  .bigscreen-hidden{
+    display: flex;
+    font-size: 56px;
+    color: rgba(2, 48, 89, 1);
+    font-weight: 700;
+  }
+  .section2-text h1{
+    display: none;
+}
   .section2{
     flex-direction: column;
     justify-content: center;
   }
   .section2-img{
     text-align: center;
+    width: 36px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section2-img img{
+    width: 455px;
+    justify-content: center;
   }
 }
 </style>

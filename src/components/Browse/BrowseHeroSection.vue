@@ -89,4 +89,20 @@ export default {
     font-size: 16px;
     color: white;
 }
+@media screen and (max-width: 850px){
+  .browse-input{
+    border: none;
+    width: 280px;
+    font-size: 20px;
+    outline: none;
+    background-color: #4690e3;
+  }
+  .hero-section-left{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 39px;
+}
+}
 </style>

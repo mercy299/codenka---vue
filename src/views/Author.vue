@@ -1,5 +1,6 @@
 <template>
   <NavBar dark />
+  <Hamburger/>
   <AuthorHero />
   <AuthorProductSummary />
   <AuthorAboutProduct />
@@ -12,9 +13,11 @@ import AuthorHero from '../components/Author/AuthorHero.vue'
 import AuthorProductSummary from '../components/Author/AuthorProductSummary.vue'
 import AuthorAboutProduct from '../components/Author/AuthorAboutProduct.vue'
 import Footer from '@/components/Footer.vue'
+import Hamburger from '@/components/Hamburger.vue'
 export default {
   components: {
     NavBar,
+    Hamburger,
     AuthorHero,
     AuthorProductSummary,
     AuthorAboutProduct,

@@ -39,4 +39,15 @@ body,
   padding: 0;
   margin: 0;
 }
+.hamburger{
+    display: none;
+  }
+@media screen and (max-width: 850px) {
+  .navbar:not(.always-visible) {
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+}
 </style>
