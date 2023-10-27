@@ -1,6 +1,6 @@
 <template>
-    <section class="product-summary">
-      <div class="content">
+  <section class="product-summary">
+    <div class="content">
       <div class="product-summary-flex">
         <div class="bth-boxes">
           <div class="product-summary-head-text">
@@ -75,8 +75,6 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-
-
 }
 .bth-boxes{
     display: flex;
@@ -153,5 +151,33 @@ hr{
 .tag-text{
     color: #034CBC;
     justify-content: space-around;
+}
+@media screen and (max-width: 850px){
+  .grey-box{
+    height: 340px;
+    width: 500px;
+    background-color: #FBFBFB;
+  }
+  .grey-boxes-item{
+    display: none;
+  }
+  .product-summary-flex{
+    display: flex;
+    /* padding: 1em 4em; */
+    /* gap: 3em; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: cente;
+  }
+  .content{
+  /* max-width: 1200px;
+  margin: 0 auto;
+  display: flex; */
+  justify-content: center;
+  }
+  hr{
+  width: 100%;
+  }
 }
 </style>

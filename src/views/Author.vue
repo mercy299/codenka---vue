@@ -4,6 +4,7 @@
   <AuthorHero />
   <AuthorProductSummary />
   <AuthorAboutProduct />
+  <AuthorFilterResults/>
   <Footer />
 </template>
 
@@ -12,6 +13,7 @@ import NavBar from '../components/NavBar.vue'
 import AuthorHero from '../components/Author/AuthorHero.vue'
 import AuthorProductSummary from '../components/Author/AuthorProductSummary.vue'
 import AuthorAboutProduct from '../components/Author/AuthorAboutProduct.vue'
+import AuthorFilterResults from '@/components/Author/AuthorFilterResults.vue'
 import Footer from '@/components/Footer.vue'
 import Hamburger from '@/components/Hamburger.vue'
 export default {
@@ -21,6 +23,7 @@ export default {
     AuthorHero,
     AuthorProductSummary,
     AuthorAboutProduct,
+    AuthorFilterResults,
     Footer
   },
   data() {

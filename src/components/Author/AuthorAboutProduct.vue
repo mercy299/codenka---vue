@@ -59,4 +59,9 @@ export default {
 hr{
   width: 1040px;
 }
+@media screen {
+  hr{
+    width:100%;
+  }
+}
 </style>

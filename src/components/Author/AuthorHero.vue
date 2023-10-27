@@ -1,5 +1,6 @@
 <template>
-      <div class="hero-section">
+    <div class="hero-section">
+    <div class="content">
       <div class="input-search">
         <i class="fa-solid fa-magnifying-glass fg"></i>
         <input
@@ -9,6 +10,7 @@
         />
       </div>
     </div>
+    </div>
 </template>
 
 <script>
@@ -17,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .hero-section{
     padding: 3em 6em;
     display: flex;
@@ -52,5 +54,10 @@ export default {
     font-size: 20px;
     outline: none;
     background-color: #4690e3;
+}
+@media screen and (max-width: 850px) {
+    .browse-input{
+        width: 400px;
+    }
 }
 </style>

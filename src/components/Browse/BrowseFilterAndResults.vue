@@ -741,7 +741,7 @@ input{
     display: none;
   }
   .filter-and-result-cards{
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     flex-direction: column;
     align-content: center;

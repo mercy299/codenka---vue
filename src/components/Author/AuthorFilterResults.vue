@@ -193,7 +193,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .filter-and-result-cards-section{
     padding: 0 3em;
 }
@@ -201,7 +201,8 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  background-color: aqua;
+  flex-direction: column;
+  /* background-color: aqua; */
 }
 .filter-and-result{
     /* width: 90%; */
@@ -218,6 +219,11 @@ export default {
     display: grid;
     grid-template-columns: repeat(4, auto);
     /* gap: 10px; */
+}
+hr{
+    color: grey;
+    width: 100%;
+    margin-top: 22px;
 }
 .filter-and-result-card-item{
     background-color: rgba(255, 255, 255, 1);
@@ -267,5 +273,21 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media screen and (max-width: 850px){
+  .filter-and-result-cards{
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .filter-and-result-cards:nth-child(n +4){
+    display: none;
+  }
+  hr{
+    display: none;
+  }
 }
 </style>
