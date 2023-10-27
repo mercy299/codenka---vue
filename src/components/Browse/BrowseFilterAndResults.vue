@@ -1,5 +1,6 @@
 <template>
     <section class="filter-and-result">
+      <div class="content">
       <div class="filter">
         <div>
           <div class="categories-dropdown">
@@ -596,6 +597,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <div class="pagination">
       <p>1 2 3 4 ... 10</p>
@@ -608,13 +610,22 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .filter-and-result{
     /* width: 90%; */
     /* margin: auto; */
     /* background-color: rgb(248, 249, 255); */
     display: flex;
     padding: 30px;
+    justify-content: center;
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    padding: 2em 0;
 }
 .filter-and-result .filter {
     width: 20%;
@@ -734,6 +745,8 @@ input{
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .filter-and-result-cards .filter-and-result-card-item:nth-child(n +7){
     display: none;

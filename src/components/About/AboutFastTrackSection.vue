@@ -1,14 +1,16 @@
 <template>
     <section class="section4">
+    <div class="content">
     <div class="section4-img">
       <img src="@/assets/img/3d-hand.png" />
     </div>
     <div class="section4-mid-text">
       <p>
-        Fast-track your website or app creation <br />process with Codenka
+        Earn more money on the go.<br />Get started with codenka
       </p>
       <button>Get Started</button>
     </div>
+  </div>
   </section>
 </template>
 
@@ -21,13 +23,20 @@ export default {
 <style scoped>
 .section4{
   /* display: flex; */
-  flex-direction: column;
+  
   justify-content: center;
   background-image: url("@/assets/img/section4-background.svg");
   background-size: 1930px;
   background-color: #efefef;
-  padding: 3em 0;
-  padding-top: 3em;
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding-top: 3em;
+
 }
 .section4-img{
   display: flex;
@@ -40,8 +49,9 @@ export default {
 }
 .section4-mid-text p{
   font-size: 38px;
-  font-weight:500;
+  font-weight:700;
   text-align: center;
+  line-height: 64px;
 }
 .section4 button{
   padding: 1em 1em;
@@ -57,10 +67,10 @@ export default {
 }
 @media screen and (max-width: 850px) {
   .section4{
-    background-color: #d9e2ff;
+    padding: 80px 0;
   }
-  .section4-img {
-    display: none;
-  }
+  /* .section4-img {
+    width: 420px;
+  } */
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
     <section class="hero-section">
+        <div class="content">
       <div class="hero-section-text">
         <h1>Creative UI Kits <br />and Libaries</h1>
         <p>
@@ -18,6 +19,7 @@
       <div class="hero-section-img">
         <img src="@/assets/img/objects.svg" alt="objects"  />
       </div>
+    </div>
     </section>
 </template>
 
@@ -29,12 +31,21 @@ export default {
 
 <style scoped> 
 .hero-section{
+    margin:  auto;
+    justify-content: center;
+    max-width: 100%;
     display: flex;
     flex-direction:row;
     padding: 3em 5em;
     gap: 1em;
     padding-bottom: 11em;
     background-color: rgb(247, 249, 255);
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
 }
 .hero-section-text{
     flex: 25%;
@@ -73,21 +84,21 @@ input{
     width: 454px;
     font-size: 19px;
     outline: none;
-    background-color:rgba(251, 251, 251, 1);
+    background-color:#f2f7fa;
     /* padding: 0 1em; */
 }
 .fg{
     padding: 0.2em 1em;
     width: 24px;
     transform: scale(-1, 1);
-    color: rgba(141, 144, 145, 1);
+    color: #f2f7fa;
 
 }
 .input-search{
     /* border: 1px solid red; */
     height: 20px;
     padding: 1.5em 0.6em;
-    background-color:rgba(251, 251, 251, 1);
+    background-color:#f2f7fa;
     border-radius: 9px;
     display: inline-flex;
 }
@@ -96,7 +107,7 @@ input{
     color: rgba(141, 144, 145, 1);
 }
 @media screen and (max-width: 1390px) {
-    .hero-section{
+    .content{
     display: flex;
     flex-direction:column-reverse;
     padding: 3em 5em;

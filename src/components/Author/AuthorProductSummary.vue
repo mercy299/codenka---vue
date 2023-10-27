@@ -1,5 +1,6 @@
 <template>
     <section class="product-summary">
+      <div class="content">
       <div class="product-summary-flex">
         <div class="bth-boxes">
           <div class="product-summary-head-text">
@@ -34,7 +35,7 @@
             <p>$37</p>
           </div>
           <a class="button" id="checkout" @click="openModal">Buy Now</a>
-          <hr width="380" />
+          <hr />
           <div class="tag">
             <img src="@/assets/img/tag.svg" />
             <p>Tags</p>
@@ -45,6 +46,7 @@
           </div>
         </div>
        <SavedModal v-show="showModal" @close-modal="showModal = false"/>
+      </div>
       </div>
     </section>
 </template>
@@ -68,12 +70,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+
+}
 .bth-boxes{
     display: flex;
     row-gap: 10px;
     flex-direction: column;
-    flex: 70%;
+    flex: 50%;
 }
 .grey-box{
     height: 540px;
@@ -102,12 +111,13 @@ export default {
 }
 hr{
     color: grey;
-    /* width: 450px; */
+    width: 100%;
     margin-top: 22px;
 }
 .product-summary-flex{
     display: flex;
     padding: 1em 4em;
+    gap: 3em;
 }
 .product-summary-head-text{
     display: flex;
@@ -130,7 +140,7 @@ hr{
 .product-pricing{
     display: flex;
     flex-direction: column;
-    flex: 30%;
+    flex: 50%;
 }
 .product-pricing-text{
     display: flex;

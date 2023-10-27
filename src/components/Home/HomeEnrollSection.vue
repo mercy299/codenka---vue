@@ -1,5 +1,6 @@
 <template>
     <section class="section2">
+      <div class="content">
       <div class="bigscreen-hidden">
         <p>Enroll as a Codenka Designer</p> 
       </div>
@@ -34,6 +35,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
 </template>
 
@@ -49,10 +51,16 @@ export default {
 }
 .section2{
     background-color:rgb(251, 252, 255);
-    display: flex;
-    margin: auto;
+    /* display: flex; */
     padding: 5em 4em 12em 4em ;
-    border-radius: 12px;
+    /* border-radius: 12px; */
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
 }
 .section2-img{
     flex: 1;
@@ -70,6 +78,7 @@ export default {
 }
 .section2-text h1{
     font-size: 56px;
+    /* width: 800px; */
     color: rgba(2, 48, 89, 1);
 }
 @media screen and (max-width: 1200px) {
@@ -82,7 +91,10 @@ export default {
   .section2-text h1{
     display: none;
 }
-  .section2{
+.section2{
+  background-color: #f2f4ff;;
+}
+  .content{
     flex-direction: column;
     justify-content: center;
   }
@@ -95,6 +107,9 @@ export default {
   .section2-img img{
     width: 455px;
     justify-content: center;
+  }
+  .section2{
+    background-color: #f2f4ff;
   }
 }
 </style>

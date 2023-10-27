@@ -1,5 +1,6 @@
 <template>
-      <section class="filter-and-result-cards-section">
+    <section class="filter-and-result-cards-section">
+    <div class="content">
       <p>More from this author</p>
       <div class="filter-and-result-cards">
         <div class="filter-and-result-card-item">
@@ -182,6 +183,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
 </template>
 
@@ -194,6 +196,12 @@ export default {
 <style>
 .filter-and-result-cards-section{
     padding: 0 3em;
+}
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  background-color: aqua;
 }
 .filter-and-result{
     /* width: 90%; */

@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <div class="content">
     <div class="footer-top">
       <img src="@/assets/img/logo/logo-light.svg" alt="logo" width="150px" />
       <div>
@@ -50,6 +51,7 @@
         </ul>
       </div>
     </div>
+  </div>
   </footer>
 </template>
 
@@ -57,12 +59,19 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 footer {
-  display: flex;
   background-color: #0b0d17;
   color: white;
   padding: 4em 0;
+}
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
 }
 .footer-top {
   flex: 1;
@@ -93,11 +102,12 @@ footer {
   line-height: 230%;
 }
 @media screen and (max-width: 850px) {
-  footer {
+  .content {
     display: flex;
     flex-direction: column;
     padding: 2em 0;
   }
+
   /* .footer-ul:nth-child(n + 2){
     display: inline;
   } */

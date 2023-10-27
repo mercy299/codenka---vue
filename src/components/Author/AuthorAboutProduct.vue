@@ -1,5 +1,6 @@
 <template>
-      <section class="about">
+    <section class="about">
+    <div class="content">
       <hr />
       <h1>About the Product</h1>
       <p>
@@ -20,8 +21,10 @@
         </li>
         <li><span class="span-black">All future updates</span></li>
       </ul>
-    </section>
+    </div>
     <hr />
+    </section>
+   
 </template>
 
 <script>
@@ -30,11 +33,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .about{
     padding-left: 5%;
     padding-top: 5%;
-    width: 55%;
+    /* width: 55%; */
+}
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 .about h1{
     color: #023059;
@@ -45,5 +55,8 @@ export default {
 }
 .span-black, .about p{
     color: #8D9091;
+}
+hr{
+  width: 1040px;
 }
 </style>

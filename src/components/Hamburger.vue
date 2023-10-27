@@ -6,7 +6,6 @@
         <router-link to="/about">About</router-link>
         <router-link to="/browse">Browse</router-link>
         <router-link to="/author">Become an Author</router-link>
-        <!-- Add more menu items as needed -->
       </div>
     </div>
   </template> 
@@ -29,12 +28,11 @@
 </script>
 
 <style scoped>
-/* BurgerMenu.vue */
 button {
     position: absolute;
-    top: 10px; /* Adjust the top position as needed */
-    right: 10px; /* Adjust the right position as needed */
-    z-index: 2; /* Set a higher z-index to appear on top */
+    top: 10px; 
+    right: 10px; 
+    z-index: 2; 
     background: none;
     border: none;
     font-size: 50px;
@@ -45,18 +43,20 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  /* justify-content: center; */
   background-color: #023059;
   position: absolute;
   top: 0;
   right: 0;
-  width: 830px;
-  padding: 60px;
+  width: 100%;
+  padding-top: 60px;
   border-radius: 5px;
   height: 100vh;
-  /* z-index: 99; */
+  z-index: 1;
 }
 
-/* MenuItem.vue */
+
 
 a {
   color: white;

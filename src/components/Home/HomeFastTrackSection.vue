@@ -1,5 +1,6 @@
 <template>
-      <section class="section4">
+    <section class="section4">
+      <div class="content">
       <div class="section4-img">
         <img src="@/assets/img/3d-hand.png" />
       </div>
@@ -36,6 +37,7 @@
         </div>
         <button class="bigscreen-hidden">Get Started</button>
       </div>
+      </div>
     </section>
 </template>
 
@@ -55,6 +57,12 @@ export default {
     background-color: #f9fafe;
     padding: 3em 0;
     padding-top: 3em;
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .section4-img{
     display: flex;

@@ -1,5 +1,6 @@
 <template>
       <section class="section3">
+      <div class="content">
       <div class="section3-top">
         <h2>Featured Kits</h2>
         <p>
@@ -152,6 +153,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
 </template>
 
@@ -161,11 +163,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section3{
     /* width: 90%; */
     /* margin: auto; */
     background-color: rgb(248, 249, 255);
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .section3-top{
     display: flex;
@@ -275,15 +283,24 @@ export default {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width: 1200px) {
+  .section3-btns button:nth-child(n + 7){
+    display: none;
+  }
+}
 @media screen and (max-width: 850px) {
   .section3{
     background-color: #d9e2ff;
   }
+  /* .section3-top, .section3-btns{
+    background-color: #eff3ff;
+  } */
   .section3-btns button:nth-child(n + 7){
     display: none;
   }
   .section3-cards{
     margin-top: 1em;
+    /* background-color: #e8edfd; */
   }
 
 }

@@ -35,7 +35,7 @@ export default {
     position: relative;
 }
 .hero-section .content{
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0px auto;
     padding: 4em 0px;
 }
@@ -90,6 +90,10 @@ export default {
     color: white;
 }
 @media screen and (max-width: 850px){
+  .hero-section{
+    position: relative;
+    z-index: 0.1;
+  }
   .browse-input{
     border: none;
     width: 280px;
@@ -103,6 +107,6 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 39px;
-}
+  }
 }
 </style>

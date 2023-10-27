@@ -1,5 +1,6 @@
 <template>
-      <section class="section2">
+    <section class="section2">
+    <div class="content">
       <h1>Welcome, to Codenka</h1>
       <h3>Africa's own Envato</h3>
       <div><img src="@/assets/img/about-blue-line.svg" /></div>
@@ -22,6 +23,7 @@
         </p>
       </div>
       <div><img src="@/assets/img/Saly-aboutpage.png" /></div>
+    </div>
     </section>
 </template>
 
@@ -34,10 +36,16 @@ export default {
 <style scoped>
 .section2{
     display: flex;
+}
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 2em;
     padding-bottom: 1em;
+    gap: 0;
+
 }
 .section2 h1{
     font-size: 30px;
